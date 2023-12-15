@@ -1,0 +1,20 @@
+import time
+
+def display_time():
+    while True:
+        # Get the current time
+        current_time = time.localtime()
+        formatted_time = time.strftime("%H:%M:%S", current_time)
+
+        # Clear the console (platform-dependent)
+        # You might need to adjust this for your specific platform (e.g., os.system('clear') for Unix-like systems)
+        print('\033c', end='')
+
+        # Display the current time
+        print("Current Time: {}".format(formatted_time))
+
+        # Wait for one second
+        time.sleep(1)
+
+if __name__ == "__main__":
+    display_time()
